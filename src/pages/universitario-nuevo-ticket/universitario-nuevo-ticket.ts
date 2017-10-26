@@ -23,24 +23,12 @@ export class UniversitarioNuevoTicketPage {
   }
 
   openMenu() {
+    this.menu.enable(true, 'universitario');
      this.menu.open();
      this.menu.toggle();
   }
-  
-  GoNuevo(){
-    this.navCtrl.setRoot('UniversitarioNuevoTicketPage');
-  }
-  GoHome(){
-    this.navCtrl.setRoot('UniversitarioHomePage');
-  }
-  GoProceso(){
+
+     GoProceso(){
     this.navCtrl.setRoot('UniversitarioProcesoPage');
   }  
-  GoHistorial(){
-    this.navCtrl.setRoot('UniversitarioHistorialPage');
-  }  
-  GoLogout(){
-    this.navCtrl.setRoot('HomePage');
-  }  
-
 }

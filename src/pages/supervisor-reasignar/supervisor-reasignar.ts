@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+
 
 /**
  * Generated class for the SupervisorReasignarPage page.
@@ -15,19 +16,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SupervisorReasignarPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,  public menu: MenuController) {
+  
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SupervisorReasignarPage');
   }
 
+  openMenu() {
+    this.menu.enable(true, 'supervisor');
+     this.menu.open();
+     this.menu.toggle();
+  }
 
   reasignar(){
     this.navCtrl.setRoot('SupervisorTicketsReasignarPage');
   }
-  usuarios(){
-    this.navCtrl.setRoot('SupervisorUsuariosPage');
-  }
+
   
 }

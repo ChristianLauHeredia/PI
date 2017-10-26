@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
 
 
 /**
- * Generated class for the BibliotecarioReasignarPage page.
+ * Generated class for the SupervisorReasignarConfirmarPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,30 +11,28 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
 
 @IonicPage()
 @Component({
-  selector: 'page-bibliotecario-reasignar',
-  templateUrl: 'bibliotecario-reasignar.html',
+  selector: 'page-supervisor-reasignar-confirmar',
+  templateUrl: 'supervisor-reasignar-confirmar.html',
 })
-export class BibliotecarioReasignarPage {
+export class SupervisorReasignarConfirmarPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,  public menu: MenuController) {
   
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BibliotecarioReasignarPage');
+    console.log('ionViewDidLoad SupervisorReasignarConfirmarPage');
   }
 
-  openMenu() {
-    this.menu.enable(true, 'bibliotecario');
+      openMenu() {
+    this.menu.enable(true, 'supervisor');
      this.menu.open();
      this.menu.toggle();
-  }  
-  
-  GoHome(){
-    this.navCtrl.setRoot('BibliotecarioHomePage');
   }
 
-    GoBit(){
-    this.navCtrl.setRoot('BibliotecarioBitacoraPage');
+
+   reasignar(){
+    this.navCtrl.setRoot('SupervisorReasignarPage');
   }
+
 }

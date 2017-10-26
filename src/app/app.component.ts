@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, Nav, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
   templateUrl: 'app.html'
 })
 export class MyApp {
+  @ViewChild(Nav) Nav
   rootPage:any = HomePage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
@@ -19,8 +20,38 @@ export class MyApp {
     });
   }
 
-  openPage(){
-    
+  GoNuevo(){
+    this.Nav.setRoot( 'UniversitarioNuevoTicketPage');
   }
+  GoHome(){
+    this.Nav.setRoot('UniversitarioHomePage');
+  }
+  GoProceso(){
+    this.Nav.setRoot('UniversitarioProcesoPage');
+  }  
+  GoHistorial(){
+    this.Nav.setRoot('UniversitarioHistorialPage');
+  }  
+  GoNuevoB(){
+    this.Nav.setRoot( 'BibliotecarioTomarTicketPage');
+  }
+  GoHomeB(){
+    this.Nav.setRoot('BibliotecarioHomePage');
+  }
+  GoProcesoB(){
+    this.Nav.setRoot('BibliotecarioTomadosPage');
+  }  
+  GoHistorialB(){
+    this.Nav.setRoot('BibliotecarioHistorialPage');
+  } 
+  GoReasignar(){
+    this.Nav.setRoot('SupervisorReasignarPage');
+  } 
+  GoUsuarios(){
+    this.Nav.setRoot('SupervisorUsuariosPage');
+  } 
+  GoLogout(){
+    this.Nav.setRoot(MyApp);
+  } 
 }
 

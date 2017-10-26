@@ -25,21 +25,13 @@ export class BibliotecarioResponderPage {
   }
   
   openMenu() {
+    this.menu.enable(true, 'bibliotecario');
      this.menu.open();
      this.menu.toggle();
-  }
-  
-  GoHome(){
-    this.navCtrl.setRoot('BibliotecarioHomePage');
-  }
-  GoNuevo(){
-    this.navCtrl.setRoot('BibliotecarioTomarTicketPage');
-  }
+  }  
   GoProceso(){
     this.navCtrl.setRoot('BibliotecarioTomadosPage');
   }  
-  GoHistorial(){
-    this.navCtrl.setRoot('BibliotecarioHistorialPage');
-  }  
+
 
 }
