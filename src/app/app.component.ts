@@ -50,6 +50,9 @@ export class MyApp {
   GoUsuarios(){
     this.Nav.setRoot('SupervisorUsuariosPage');
   } 
+  GoEstats(){
+    this.Nav.setRoot('AdministradorEstadisticasPage');
+  } 
   GoLogout(){
     this.Nav.setRoot(MyApp);
   } 

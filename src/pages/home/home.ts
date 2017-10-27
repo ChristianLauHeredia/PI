@@ -21,7 +21,7 @@ export class HomePage {
   	}, 4000);
   }
 
-  login() {
+    login() {
       this.navCtrl.setRoot('UniversitarioHomePage');
     }
     login2() {
@@ -30,6 +30,9 @@ export class HomePage {
     login3() {
       this.navCtrl.setRoot('SupervisorReasignarPage');
     }
+    login4() {
+      this.navCtrl.setRoot('AdministradorEstadisticasPage');
+    }    
 
   	registro(){
   		this.navCtrl.push('RegistroPage');
